@@ -14,11 +14,11 @@ enum PhotoRecordState {
 
 class PhotoRecord {
   let name: String
-  let url: URL
+  let url: URL?
   var state = PhotoRecordState.new
   var image = UIImage(named: "Placeholder")
   
-  init(name: String, url: URL) {
+  init(name: String, url: URL?) {
     self.name = name
     self.url = url
   }
@@ -32,6 +32,7 @@ class PendingOperations {
     queue.maxConcurrentOperationCount = 1
     return queue
   }()
+  
   
   lazy var filtrationsInProgress = [IndexPath: Operation]()
   lazy var filtrationQueue: OperationQueue = {
@@ -56,8 +57,8 @@ class ImageDownloader: Operation {
     if self.isCancelled {
       return
     }
-    
-    let imageData = try? Data(contentsOf: self.photoRecord.url)
+    guard let url = self.photoRecord.url else { return }
+    let imageData = try? Data(contentsOf: url)
     
     if self.isCancelled {
       return
@@ -129,4 +130,10 @@ class ImageFiltration: Operation {
 //    return nil
 //    
 //  }
+}
+
+
+struct PhotoList {
+  let name: String
+  let url: URL?
 }

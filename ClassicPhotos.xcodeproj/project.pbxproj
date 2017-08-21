@@ -15,6 +15,7 @@
 		27DF647F19657EDE00B42725 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DF647E19657EDE00B42725 /* CoreImage.framework */; };
 		B4E0EE3B1F46B21E00B837C8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E0EE3A1F46B21E00B837C8 /* Launch Screen.storyboard */; };
 		B4E0EE3D1F46D4FB00B837C8 /* PhotoOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E0EE3C1F46D4FA00B837C8 /* PhotoOperations.swift */; };
+		B4E403E11F4BA658006CCD6A /* ClassicPhotosDictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4E403E01F4BA658006CCD6A /* ClassicPhotosDictionary.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		27DF647E19657EDE00B42725 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		B4E0EE3A1F46B21E00B837C8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B4E0EE3C1F46D4FA00B837C8 /* PhotoOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoOperations.swift; sourceTree = "<group>"; };
+		B4E403E01F4BA658006CCD6A /* ClassicPhotosDictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ClassicPhotosDictionary.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				27DF647A19657AD900B42725 /* Storyboard.storyboard */,
 				27DF647C19657B7500B42725 /* ListViewController.swift */,
 				B4E0EE3C1F46D4FA00B837C8 /* PhotoOperations.swift */,
+				B4E403E01F4BA658006CCD6A /* ClassicPhotosDictionary.plist */,
 			);
 			path = ClassicPhotos;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E403E11F4BA658006CCD6A /* ClassicPhotosDictionary.plist in Resources */,
 				B4E0EE3B1F46B21E00B837C8 /* Launch Screen.storyboard in Resources */,
 				27DF646519657A9300B42725 /* Images.xcassets in Resources */,
 				27DF647B19657AD900B42725 /* Storyboard.storyboard in Resources */,
