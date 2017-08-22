@@ -91,8 +91,7 @@ class ListViewController: UITableViewController {
   }
   func loadImagesForOnscreenCells() {
     if let pathsArray = tableView.indexPathsForVisibleRows {
-      let allPendingOperations = Set(pendingOpetations.donwloadsInProgress.keys)
-      allPendingOperations.union(pendingOpetations.filtrationsInProgress.keys)
+      let allPendingOperations = Set(pendingOpetations.donwloadsInProgress.keys).union(pendingOpetations.filtrationsInProgress.keys)
     
       var toBeCancelled = allPendingOperations
       let visiblePaths = Set(pathsArray)
@@ -198,8 +197,10 @@ class ListViewController: UITableViewController {
           print("plist read error: ", error.localizedDescription)
         }
         
-        self.tableView.reloadData()
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        DispatchQueue.main.async {
+          self.tableView.reloadData()
+          UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        }
       }
     }.resume()
   }
