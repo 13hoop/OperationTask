@@ -1,4 +1,7 @@
 # OperationTask
+update swift3 + Xcode 9
+
+xcode 终于完善继承了git, 泪流满面啊
 
 2种独立且分离的操作队列：`DownloadOperationQueue` 和 `FiltrationOperationQueue`
 
